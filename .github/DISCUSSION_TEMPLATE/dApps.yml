@@ -1,32 +1,29 @@
-title: "[General] <Title>"
-labels: ["general"]
+title: "[dApps] <Title>"
+labels: ["dApp"]
 body:
   - type: markdown
     attributes:
       value: |
         ## Check the docs!
-        Before proceeding, please check these links for contract verification help:
-         - [Differences from Ethereum](https://era.zksync.io/docs/dev/building-on-zksync/contracts/differences-with-ethereum.html)
-         - [Fee mechanism](https://era.zksync.io/docs/dev/developer-guides/transactions/fee-model.html)
-         - [Tutorials](https://era.zksync.io/docs/dev/tutorials)
-         - [Changelog](https://era.zksync.io/docs/dev/troubleshooting/changelog.html)
-         - [Important links](https://era.zksync.io/docs/dev/troubleshooting/important-links.html)
+        Before proceeding, please check the Disclaimer.
 
   - type: dropdown
-    id: environment
+    id: type
     attributes:
-      label: Environment
+      label: Type
       options:
         - 
-        - Testnet
-        - Mainnet
+        - DeFi
+        - NFT
+        - Infrastructure
+        - Wallet
     validations:
       required: true
       
   - type: textarea
-    id: functionality-description
+    id: dapp-description
     attributes:
-      label: Provide a brief description of the functionality you're trying to implement.
+      label: Provide a brief description of the dApp.
     validations:
       required: true
       
