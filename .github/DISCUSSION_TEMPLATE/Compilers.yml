@@ -1,0 +1,50 @@
+title: "[Compilers]<Title>"
+labels: ["compiler"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Check the docs!
+        Have you check these sections of the docs?
+        - [Differences from Ethereum](https://era.zksync.io/docs/dev/building-on-zksync/contracts/differences-with-ethereum.html)
+        - [Compiler Documentation](https://docs.zksync.io/zk-stack/components/compiler/toolchain/overview.html#ir-compilers)
+        - [Compiler zksolc](https://docs.zksync.io/zk-stack/components/compiler/toolchain/solidity.html)
+        - [Compiler zkvyper](https://docs.zksync.io/zk-stack/components/compiler/toolchain/vyper.html)
+        - [Configure hardhat-zksolc](https://docs.zksync.io/build/tooling/hardhat/hardhat-zksync-solc.html)
+        - [Configure hardhat-zkvyper](https://docs.zksync.io/build/tooling/hardhat/hardhat-zksync-vyper.html)
+  - type: checkboxes
+    attributes:
+      label: Which compiler are you using?
+      options:
+        - label: zksolc
+        - label: zkvyper
+  - type: input
+    id: version
+    attributes:
+      label: Which version of Solidity or Vyper?
+      description: The Solidity or Vyper version from your config file
+    validations:
+      required: true
+  - type: input
+    id: zkversion
+    attributes:
+      label: zksolc/zkvyper version?
+      description: The zksolc/zkvyper version from your config file
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Explain the issue
+      value: |
+        ...
+      render: bash
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Link to your repo?
+      description: Though not mandatory, sharing a repository link with a README that details how to replicate the issue and the errors you're encountering will significantly expedite our support process.
+    validations:
+      required: false

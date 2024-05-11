@@ -1,0 +1,119 @@
+title: "[Contract Verification] <Title>"
+labels: ["contract-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Check the docs!
+        Before proceeding, please check these links for contract verification help:
+         - [Verifying contracts using the zkSync Era block explorer](https://era.zksync.io/docs/api/tools/block-explorer/contract-verification.html#verifying-contracts-using-the-zksync-era-block-explorer)
+         - [Verifying contracts using the hardhat-zksync-verify plugin](https://era.zksync.io/docs/api/hardhat/hardhat-zksync-verify.html)
+         - [Verifying contracts using the hardhat-zksync-verify-vyper plugin](https://docs.zksync.io/build/tooling/hardhat/hardhat-zksync-verify-vyper.html)
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - 
+        - Testnet
+        - Mainnet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Block Explorer
+      options:
+        - 
+        - https://explorer.zksync.io/
+        - https://era.zksync.network/
+    validations:
+      required: true   
+
+  - type: checkboxes
+    id: issue-type
+    attributes:
+      label: Issue Type
+      options:
+        - label: Plugin
+        - label: Block Explorer
+    validations:
+      required: true
+  
+  - type: input
+    id: contract-address
+    attributes:
+      label: Contract Address
+    validations:
+      required: true
+
+  - type: dropdown
+    id: compiler-type
+    attributes:
+      label: Compiler Type
+      options:
+        - 
+        - Single file
+        - Multi-part contract
+    validations:
+      required: true
+
+  - type: input
+    id: zksolc-version
+    attributes:
+      label: zkSolc Version
+    validations:
+      required: true
+
+  - type: input
+    id: solc-version
+    attributes:
+      label: Solc Version
+    validations:
+      required: true
+
+  - type: input
+    id: contract-name
+    attributes:
+      label: Contract Name
+    validations:
+      required: true
+
+  - type: textarea
+    id: contract-code
+    attributes:
+      label: Contract Code
+    validations:
+      required: true
+
+  - type: textarea
+    id: constructor-arguments
+    attributes:
+      label: Constructor Arguments
+    validations:
+      required: true
+
+  - type: input
+    id: hardhat-verify-plugin-version
+    attributes:
+      label: Hardhat Verify Plugin Version
+      description: (OPTIONAL if you're using the plugin)
+    validations:
+      required: false
+
+  - type: input
+    id: repo-link
+    attributes:
+      label: Repo Link (Optional)
+      description: Though not mandatory, sharing a repository link with a README that details how to replicate the issue and the errors you're encountering will significantly expedite our support process.
+    validations:
+      required: false
+      
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional Details
+      description: If applicable, please provide any additional details
+    validations:
+      required: false
